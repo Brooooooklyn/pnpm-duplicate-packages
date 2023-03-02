@@ -12,6 +12,8 @@ And there is a `apps/web` package that depends on both `a` and `b`. When you run
 
 https://perfsee.com/projects/pnpm-duplicate-packages/bundle/1
 
+![bundle](./bundle.png)
+
 ## Steps to reproduce
 - clone this repo
 - run `pnpm install`
