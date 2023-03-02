@@ -8,6 +8,10 @@ In this repo, there is a `a` package and `b` package that both depend on `@mui/m
 
 And there is a `apps/web` package that depends on both `a` and `b`. When you run `pnpm -r build`, you will see that `@mui/material` is bundled twice in `apps/web/dist/material.js`.
 
+## Online Bundle Report
+
+https://perfsee.com/projects/pnpm-duplicate-packages/bundle/1
+
 ## Steps to reproduce
 - clone this repo
 - run `pnpm install`
