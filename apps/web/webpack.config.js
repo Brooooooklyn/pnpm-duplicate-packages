@@ -1,3 +1,5 @@
+const { PerfseePlugin } = require('@perfsee/webpack')
+
 /**
  * @type {import('webpack').Configuration}
  */
@@ -56,7 +58,13 @@ const config = {
   output: {
     filename: '[name].js',
     path: require('path').join(__dirname, 'dist'),
-  }
+  },
+
+  plugins: [
+    new PerfseePlugin({
+      project: 'pnpm-duplicate-packages'
+    })
+  ]
 }
 
 module.exports = config
