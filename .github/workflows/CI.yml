@@ -15,7 +15,9 @@ jobs:
         with:
           node-version: 18.x
           cache: 'pnpm'
-      - run: pnpm install
+      - run: |
+          pnpm config list
+          pnpm install --frozen-lockfile
       - run: pnpm -r build
         env:
           PERFSEE_TOKEN: ${{ secrets.PERFSEE_TOKEN }}
